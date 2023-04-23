@@ -50,8 +50,7 @@ if len(sys.argv) > 2:
 
     jsonBuild = str(sliceSize(soup))
 
-    completion = openai.ChatCompletion.create(model="gpt-3.5-turbo",
-                                              messages=[{"role": "user", "content": jsonBuild + "next move"}])
+    completion = openai.ChatCompletion.create(model="gpt-3.5-turbo",messages=[{"role": "user", "content": jsonBuild + "next best move just give a move not commendation"}])
 
     print(completion.choices[0].message.content)
 
