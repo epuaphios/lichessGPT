@@ -33,6 +33,7 @@ def getQueryList(moveSize, data):
     for i in range(moveSize):
         qb.field("moves." + str(i) + "").equals(data["moves"][i])
     qb.field("my_side").equals(my_side)
+    print(qb.get_query_list())
     return qb.get_query_list()
 
 
